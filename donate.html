@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Halaman donasi untuk mendukung pengembangan Lembaga Pendidikan Islam. Mari bersama-sama mencetak generasi penerus yang cerdas dan berakhlak mulia.">
-    <title>Donasi - Lembaga Pendidikan Islam</title>
+    <meta name="description" content="Donasi untuk Pesantren Islam. Dukungan Anda sangat berarti bagi kami.">
+    <title>Donasi Pesantren</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo.png">
+    <link rel="icon" href="assets/images/logo.png">
 </head>
 <body>
 
@@ -14,82 +14,55 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <h1>Lembaga Pendidikan Islam</h1>
+                <img src="assets/images/logo.png" alt="Logo Pesantren">
+                <h1>Pesantren Islam</h1>
             </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">Tentang Kami</a></li>
-                    <li><a href="index.html#programs">Program</a></li>
-                    <li><a href="index.html#news">Berita</a></li>
-                    <li><a href="index.html#gallery">Galeri</a></li>
-                    <li><a href="index.html#contact">Kontak</a></li>
-                    <li><a href="index.html#donations">Donasi</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="programs.html">Program</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                    <li><a href="donate.html">Donasi</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Donasi Section -->
-    <section id="donate" class="donate">
+    <!-- Donate Section -->
+    <section class="donate">
         <div class="container">
-            <h2>Donasi untuk Pengembangan Lembaga Pendidikan Islam</h2>
-            <p>Dengan berdonasi, Anda ikut berperan dalam mencetak generasi penerus yang cerdas dan berakhlak mulia. Setiap sumbangan Anda akan digunakan untuk meningkatkan kualitas fasilitas dan program pendidikan kami.</p>
-            
-            <div class="donation-options">
-                <div class="donation-option">
-                    <h3>Donasi Langsung</h3>
-                    <p>Transfer langsung ke rekening bank kami:</p>
-                    <ul>
-                        <li><strong>Bank: ABC</strong></li>
-                        <li><strong>Nomor Rekening: 123-456-789</strong></li>
-                        <li><strong>Atas Nama: Lembaga Pendidikan Islam</strong></li>
-                    </ul>
-                    <p>Setelah transfer, mohon konfirmasi melalui <a href="mailto:info@pendidikanislam.com">email kami</a>.</p>
-                </div>
+            <h2>Donasi untuk Pesantren</h2>
+            <p>Donasi Anda akan digunakan untuk mendukung kegiatan pendidikan dan fasilitas di pesantren. Setiap donasi sangat berarti bagi kami.</p>
+            <form action="#" method="POST">
+                <label for="amount">Jumlah Donasi:</label>
+                <input type="number" id="amount" name="amount" required>
 
-                <div class="donation-option">
-                    <h3>Donasi Melalui e-Wallet</h3>
-                    <p>Kami juga menerima donasi melalui platform e-wallet:</p>
-                    <ul>
-                        <li><strong>GoPay: 0812-3456-7890</strong></li>
-                        <li><strong>OVO: 0812-3456-7890</strong></li>
-                        <li><strong>DANA: 0812-3456-7890</strong></li>
-                    </ul>
-                    <p>Silakan pilih metode pembayaran yang Anda inginkan dan transfer sesuai dengan nomor di atas.</p>
-                </div>
+                <label for="payment-method">Metode Pembayaran:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="bank-transfer">Transfer Bank</option>
+                    <option value="credit-card">Kartu Kredit</option>
+                    <option value="paypal">PayPal</option>
+                </select>
 
-                <div class="donation-option">
-                    <h3>Donasi Secara Berkala</h3>
-                    <p>Jika Anda ingin memberikan donasi secara berkala (bulanan), kami dapat memudahkan Anda dengan menggunakan platform seperti:</p>
-                    <ul>
-                        <li><a href="https://www.gofundme.com" target="_blank">GoFundMe</a></li>
-                        <li><a href="https://www.kitabisa.com" target="_blank">Kitabisa</a></li>
-                    </ul>
-                    <p>Donasi berkala sangat membantu kami untuk menjalankan program pendidikan secara berkelanjutan.</p>
-                </div>
-            </div>
-
-            <div class="thank-you-message">
-                <h3>Terima Kasih atas Dukungan Anda!</h3>
-                <p>Donasi Anda sangat berarti bagi kami dan akan digunakan sepenuhnya untuk kemajuan lembaga pendidikan kami. Semoga Allah membalas kebaikan Anda dengan pahala yang berlimpah.</p>
-                <a href="index.html#donations" class="btn">Kembali ke Halaman Donasi</a>
-            </div>
+                <button type="submit" class="btn">Donasi Sekarang</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Lembaga Pendidikan Islam. All rights reserved.</p>
+            <p>&copy; 2024 Pesantren Islam. Semua hak cipta dilindungi.</p>
             <div class="social-links">
                 <a href="https://facebook.com" target="_blank">Facebook</a>
                 <a href="https://twitter.com" target="_blank">Twitter</a>
                 <a href="https://instagram.com" target="_blank">Instagram</a>
-                <a href="https://youtube.com" target="_blank">YouTube</a>
             </div>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
