@@ -171,3 +171,88 @@ footer .social-links a {
 footer .social-links a:hover {
     color: #00aaff;
 }
+
+/* styles.css - Tambahan untuk Halaman Donasi */
+
+/* Donasi Section */
+.donate {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.donate h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.donate p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.donation-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.donation-option {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+}
+
+.donation-option h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.donation-option ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.donation-option ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.thank-you-message {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.thank-you-message h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.thank-you-message p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.thank-you-message .btn {
+    background-color: #00aaff;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    color: #00aaff;
+}
