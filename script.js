@@ -1,11 +1,7 @@
-// script.js
-document.addEventListener('DOMContentLoaded', function() {
-    // Slider functionality
-    const slider = document.querySelector('.gallery-slider');
-    let index = 0;
-    
-    setInterval(() => {
-        index = (index + 1) % slider.children.length;
-        slider.style.transform = `translateX(-${index * 100}%)`;
-    }, 3000);
+// Example for toggling mobile menu
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
 });
