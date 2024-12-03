@@ -1,6 +1,4 @@
-/* styles.css - Responsif untuk Halaman Donasi */
-
-/* Reset umum dan padding default */
+/* Reset Default Style */
 * {
     margin: 0;
     padding: 0;
@@ -8,88 +6,136 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Donasi Section */
-.donate {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-.donate h2 {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.donate p {
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.donation-options {
+/* Navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
 }
 
-/* Setiap box donasi */
-.donation-option {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    min-width: 280px;
-    max-width: 400px;
-    margin-bottom: 20px;
-}
-
-.donation-option h3 {
+.navbar .logo h1 {
     font-size: 24px;
-    margin-bottom: 15px;
+    margin-left: 10px;
 }
 
-.donation-option ul {
+.navbar nav ul {
     list-style: none;
-    padding-left: 20px;
+    display: flex;
 }
 
-.donation-option ul li {
+.navbar nav ul li {
+    margin: 0 15px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
     font-size: 18px;
+}
+
+.navbar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('assets/images/banner.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
-.thank-you-message {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.thank-you-message h3 {
-    font-size: 28px;
+.hero p {
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
-.thank-you-message p {
+.hero .btn {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* About Section */
+.about {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about p {
     font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.about .btn {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Programs Section */
+.programs {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.programs h2 {
+    font-size: 30px;
+    text-align: center;
     margin-bottom: 30px;
 }
 
-.thank-you-message .btn {
-    background-color: #00aaff;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
+.program-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.program-item {
+    background-color: #ffffff;
+    padding: 20px;
     border-radius: 5px;
-    font-weight: bold;
-    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+}
+
+.program-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.program-item p {
+    font-size: 16px;
 }
 
 /* Footer */
@@ -110,75 +156,66 @@ footer .social-links a:hover {
     color: #00aaff;
 }
 
-/* Responsive Media Queries */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .donate {
-        padding: 20px;
-    }
-
-    .donation-options {
+    .navbar nav ul {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
     }
 
-    .donation-option {
-        width: 90%; /* Memastikan setiap box mengisi hampir seluruh lebar layar */
+    .program-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .program-item {
+        width: 100%;
         margin-bottom: 20px;
     }
 
-    .donation-option h3 {
-        font-size: 20px;
+    .hero h2 {
+        font-size: 30px;
     }
 
-    .donation-option ul li {
-        font-size: 16px;
+    .hero p {
+        font-size: 18px;
     }
 
-    .thank-you-message h3 {
+    .about h2, .programs h2 {
         font-size: 24px;
     }
 
-    .thank-you-message p {
+    .about p, .program-item p {
         font-size: 16px;
     }
 
-    .thank-you-message .btn {
-        font-size: 16px;
+    .about .btn, .program-item .btn {
+        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
-    .donate h2 {
-        font-size: 28px;
+    .hero {
+        height: 300px;
     }
 
-    .donate p {
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
         font-size: 16px;
     }
 
-    .donation-option {
-        width: 100%; /* Box donasi mengisi lebar layar penuh */
+    .program-item {
+        padding: 15px;
     }
 
-    .donation-option h3 {
-        font-size: 18px;
-    }
-
-    .donation-option ul li {
-        font-size: 14px;
-    }
-
-    .thank-you-message h3 {
+    .program-item h3 {
         font-size: 20px;
     }
 
-    .thank-you-message p {
-        font-size: 14px;
-    }
-
-    .thank-you-message .btn {
-        padding: 8px 16px;
+    .program-item p {
         font-size: 14px;
     }
 }
