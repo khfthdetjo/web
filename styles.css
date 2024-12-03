@@ -1,4 +1,6 @@
-/* styles.css */
+/* styles.css - Responsif untuk Halaman Donasi */
+
+/* Reset umum dan padding default */
 * {
     margin: 0;
     padding: 0;
@@ -7,177 +9,16 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
-
-/* Header */
-header {
-    background-color: #003366;
-    color: white;
-    padding: 20px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-}
-
-.navbar ul li {
-    margin-left: 20px;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-.navbar ul li a:hover {
-    color: #00aaff;
-}
-
-/* Hero Section */
-.hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 36px;
-}
-
-.hero .btn {
-    background-color: #00aaff;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-/* About Section */
-.about, .programs, .news, .gallery, .contact, .donations {
-    padding: 50px 20px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-/* Program Section */
-.programs .program-list {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.program-item {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 5px;
-    flex: 1;
-    text-align: center;
-}
-
-.program-item h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-/* News Section */
-.news .news-list {
-    display: flex;
-    gap: 20px;
-}
-
-.news-item {
-    flex: 1;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-/* Gallery Section */
-.gallery-slider {
-    display: flex;
-    overflow: hidden;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-.gallery-slider img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-/* Contact Section */
-.contact form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact input, .contact textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 16px;
-}
-
-.contact button {
-    padding: 10px;
-    background-color: #00aaff;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-}
-
-/* Footer */
-footer {
-    background-color: #003366;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer .social-links a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-}
-
-footer .social-links a:hover {
-    color: #00aaff;
-}
-
-/* styles.css - Tambahan untuk Halaman Donasi */
 
 /* Donasi Section */
 .donate {
     padding: 50px 20px;
     background-color: #f9f9f9;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .donate h2 {
@@ -199,13 +40,16 @@ footer .social-links a:hover {
     flex-wrap: wrap;
 }
 
+/* Setiap box donasi */
 .donation-option {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
+    max-width: 400px;
+    margin-bottom: 20px;
 }
 
 .donation-option h3 {
@@ -245,6 +89,15 @@ footer .social-links a:hover {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    display: inline-block;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
 
 footer .social-links a {
@@ -255,4 +108,77 @@ footer .social-links a {
 
 footer .social-links a:hover {
     color: #00aaff;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .donate {
+        padding: 20px;
+    }
+
+    .donation-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .donation-option {
+        width: 90%; /* Memastikan setiap box mengisi hampir seluruh lebar layar */
+        margin-bottom: 20px;
+    }
+
+    .donation-option h3 {
+        font-size: 20px;
+    }
+
+    .donation-option ul li {
+        font-size: 16px;
+    }
+
+    .thank-you-message h3 {
+        font-size: 24px;
+    }
+
+    .thank-you-message p {
+        font-size: 16px;
+    }
+
+    .thank-you-message .btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .donate h2 {
+        font-size: 28px;
+    }
+
+    .donate p {
+        font-size: 16px;
+    }
+
+    .donation-option {
+        width: 100%; /* Box donasi mengisi lebar layar penuh */
+    }
+
+    .donation-option h3 {
+        font-size: 18px;
+    }
+
+    .donation-option ul li {
+        font-size: 14px;
+    }
+
+    .thank-you-message h3 {
+        font-size: 20px;
+    }
+
+    .thank-you-message p {
+        font-size: 14px;
+    }
+
+    .thank-you-message .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 }
